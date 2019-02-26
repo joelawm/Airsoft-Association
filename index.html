@@ -1,76 +1,41 @@
 <html>
 <head>
-    <title> Home </title>
+    <title>Home</title>
     <link rel="icon" href="Photos/Favicon/favicon.jpg">
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background:#ffffff">
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <!--Navbar-->
-    <nav class="navbar2 navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <!--<span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>-->
-                </button>
-                <a class="navbar-brand" href="/Home"><b style="font-family:'Bebas Neue';">NAA</b></a>
-            </div>
-            <div class="collapse navbar-collapse" id="mainnavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/Home/About">ABOUT</a></li>
-                    <li><a href="/Home/Sponsors">SPONSORS</a></li>
-                    <li class="dropdown">
-                        <a href="Home/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Home/PlacesToAirsoft">Places to Airsoft</a></li>
-                            <li><a href="/Home/GeneralRules">General Rules</a></li>
-                            <li><a href="/Home/AirsoftStores">Airsoft Stores</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Home/Media">MEDIA</a></li>
-                    <li><a href="/Home/Donate">DONATE</a></li>
-                    <li><a href="/Home/Contact">CONTACT</a></li>
-                    <!--Check if logged in-->
-                   <li><a href="/User/Login">Account<span class="glyphicon glyphicon-user"></span></a></li>
-                   <li><a href="/User/Registration">Logout<span class="glyphicon glyphicon-log-out"></span></a></li>
-                   <li><a href="/User/Login">Login<span class="glyphicon glyphicon-log-in"></span></a></li>
-                   <li><a href="/User/Registration">Register<span class="glyphicon glyphicon-book"></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-     <!--Top navbar Underlying image-->
-     <!--Navbar 1-->
-     <nav class="navbar1 navbar-default">
-         <div class="container-fluid center-block" style="height:30px;">
-            <div id="Top Bar" style="height:30px; background-color:#1d1d1d" class="img-responsive" />
-            <div class="collapse navbar-collapse" id="navbarupper">
-                 <ul class="nav navbar-nav navbar-right">
-                     <li class="navbar-text" style="margin:7px; padding-top:5px;">CONNECT WITH US:</li>
-                     <li><a href="https://www.facebook.com/TheNationalAirsoftAssociation/">FACEBOOK</a></li>
-                     <li><a href="https://twitter.com/AirsoftAssoc">TWITTER</a></li>>
-                     <li><a href="https://www.instagram.com/TheNationalAirsoftAssociation/">INSTAGRAM</a></li>
-                     <li><a href="https://www.youtube.com/channel/UC3LFSFS5otvxXUd9KQp2orA">YOUTUBE</a></li>
-                     <!--<li><a href="#contact">GOOGLE PLUS</a></li>-->
-                 </ul>
-            </div>
-         </div>
-     </nav>
+     <!--Socail Media Navbar-->
+    <div class="topnavbar">
+         <a href="https://www.facebook.com/TheNationalAirsoftAssociation/">FACEBOOK</a>
+         <a href="https://twitter.com/AirsoftAssoc">TWITTER</a>
+         <a href="https://www.instagram.com/TheNationalAirsoftAssociation/">INSTAGRAM</a>
+         <a href="https://www.youtube.com/channel/UC3LFSFS5otvxXUd9KQp2orA">YOUTUBE</a>
+         <p>CONNECT WITH US:</p>
+    </div>
+    <!--Navbar Navagation Main-->
+    <div class="Navbar">
+         <a class="navbar-brand" href="/Home"><b style="font-family:'Bebas Neue';">NAA</b></a>
+         <a href="/Home/About">ABOUT</a>
+         <a href="/Home/Sponsors">SPONSORS</a>
+         <a href="Home/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION</a>
+         <a href="/Home/PlacesToAirsoft">Places to Airsoft</a>
+         <a href="/Home/GeneralRules">General Rules</a>
+         <a href="/Home/AirsoftStores">Airsoft Stores</a>
+         <a href="/Home/Media">MEDIA</a>
+         <a href="/Home/Donate">DONATE</a>
+         <a href="/Home/Contact">CONTACT</a>
+    </div>
     <!--Body-->
-    <!--Spacer-->
-    <div class="row" style="height:40px;width:1186px;"></div>
     <!--Whats happening-->
-    <div class="container center-block">
-        <div class="row text-center">
-            <b style="font-size:20px;color:#000000;">Whats happening in Airsoft?</b>
+    <div class="main">
+        <div class="text-center textTitle">
+            <b>Whats happening in Airsoft?</b>
         </div>
     </div>
-    <div class="container center-block" style="height:720px;">
+    <div class="main" style="height:720px;">
         <div class="row w3-content w3-display-container">
             <img class="frontpageslides img-responsive" src="Photos/NAA Photos/American_Flag.jpg" style="width:1186px;height:700px;">
             <img class="frontpageslides img-responsive" src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:1186px;height:700px;">
@@ -78,13 +43,10 @@
         </div>
     </div>
     <!--Welcome Portion-->
-    <div class="container center-block">
-        <div class="row text-center">
+    <div class="main">
+        <div class="text-center">
             <b style="font-size:60px;color:#000000;">Welcome Airsofters!</b>
         </div>
-        <!--Spacer-->
-        <div class="row" style="height:40px;"/>
-        <!--Spacer-->
         <div class="row text-center">
             <b style="font-size:30px;color:#000000;">What do we do?</b>
         </div>
@@ -162,7 +124,6 @@
     .navbar2 {
            margin-bottom: 0;
            background-color: #ffffff;
-           z-index: 9999;
            border: 0;
            font-size: 12px !important;
            line-height: 1.42857143 !important;
@@ -174,7 +135,6 @@
        .navbar1 {
            margin-bottom: 0;
            background-color: #1d1d1d;
-           z-index: 9998;
            border: 0;
            font-size: 9px !important;
            line-height: 70% !important;
