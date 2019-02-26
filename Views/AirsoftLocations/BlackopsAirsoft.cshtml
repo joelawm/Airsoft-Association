@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "BlackopsAirsoft";
+}
+<html>
+<head>
+    <title> Black Ops Airsoft </title>
+    <link rel="icon" href="~/Photos/Favicon/favicon.jpg">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background:#ffffff">
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <!--Navbar-->
+    @Html.Partial("NavbarUpper")
+    <!--Body-->
+    <div class="center-block" id="blackops"></div>
+</body>
+</html>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-7fKb01ESWXUUrvM4VS7RvgtzF_tWUZg&callback=initMap">
+</script>
+<!--Black Ops-->
+<script>
+      function initMap() {
+          var uluru = { lat: 42.560094, lng: -87.960921 };
+        var blackopsmap = new google.maps.Map(document.getElementById('blackops'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: blackopsmap
+        });
+      }
+</script>
+<style>
+    #blackops {
+        width: 75%;
+        height: 75%;
+        background-color: grey;
+    }
+</style>
+

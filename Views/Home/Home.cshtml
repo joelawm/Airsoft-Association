@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<html>
+<head>
+    <title> Home </title>
+    <link rel="icon" href="~/Photos/Favicon/favicon.jpg">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background:#ffffff">
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <!--Navbar-->
+    @Html.Partial("NavbarUpper")
+    <!--Body-->
+    <div class="row center-block" style="width:1186px;height:500px;">
+        <div class="col-sm-3"><p></p></div>
+        <div class="col-sm-6 center-block w3-content w3-display-container" style="width:1186px">
+            <img class="frontpageslides" src="~/Photos/slides 1.png" style="width:1186px;height:500px;">
+            <img class="frontpageslides" src="~/Photos/slides 2.png" style="width:1186px;height:500px;">
+            <img class="frontpageslides" src="~/Photos/slides.png" style="width:1186px;height:500px;">
+        </div>
+        <div class="col-sm-3"><p></p></div>
+    </div>
+</body>
+</html>
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("frontpageslides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+</script>
+<style>
+    .frontpageslides {
+        display: none;
+    }
+</style>
