@@ -5,11 +5,12 @@
      <link rel="stylesheet" type="text/css" href="css/main.css" />
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!--jvectormap-->
-     <script src="scripts/jquery-jvectormap-2.0.3.min.js"></script>
-     <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
      <!--jquery-->
-     <script src="scripts/jquery-3.3.1.min.js"></script>
+     <script src="scripts/jquery.3.3.1.min.js"></script>
+     <!--jvectormap-->
+     <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+     <script src="scripts/jquery-jvectormap-2.0.3.min.js"></script>
+     <script src="scripts/jquery-jvectormap-us-aea.js"></script>
      <!-- Twitter Bootstrap CDN -->
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -60,7 +61,7 @@
        <div id="world-map" style="width: 600px; height: 400px"></div>
           <script>
             $(function(){
-              $('#world-map').vectorMap({map: 'world_mill'});
+              $('#map').vectorMap({map: 'us_aea'});
             });
           </script>
           <div class="text-center">
