@@ -90,21 +90,8 @@ body:before {
     color: #ffffff;
 }
 
-.navbar {
-     font-size: 24px;
-     margin: 0 auto;
-     max-width: 1200px;
-     width: 94%;
-     text-decoration: none;
-     padding: 10px 10px;
+.navbarmain {
+  font-size: 14px !important;
 }
-
-.navbar a {
-     text-decoration: none;
-     color: #000;
-}
-
-.navbar a:hover {
-     text-decoration: none;
-     color: #808080;
-}
+.dropdown:hover > .dropdown-menu {
+display: block;
