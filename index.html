@@ -60,19 +60,30 @@
      <div class="main">
        <div id="map" style="width: 600px; height: 400px"></div>
           <script>
+          var markers = [
+            { latLng: [42.70, -88.5], name: 'Black Ops Airsoft',  weburl : "https://youtube.com" },
+            { latLng: [43.73, 7.41], name: 'Monaco' },
+            { latLng: [-0.52, 166.93], name: 'Nauru' }
+          ]
             $(function(){
-              var map, markerIndex = 0, markersCoords = [{name: 'VAK', coords: [50.0091294, 9.0371812], status: 'closed', offsets: [0, 2]}];
-              map = new jvm.Map({
+              $('#map').vectorMap({
                   map: 'us_aea',
+                  scaleColors: ['#C8EEFF', '#0071A4'],
+                  normalizeFunction: 'polynomial',
+                  hoverOpacity: 0.7,
+                  hoverColor: false,
                   markerStyle: {
-                    initial: {
-                      fill: 'red'
-                    }
+                      initial: {
+                          fill: '#F8E23B',
+                          stroke: '#383f47'
+                      }
                   },
-                  container: $('#map'),
-                  onMarkerTipShow: function(e, label, code){
-                    map.tip.text(markersCoords[code].lat.toFixed(2)+', '+markersCoords[code].lng.toFixed(2));
-                  },
+                  backgroundColor: '#383f47',
+                  markers: markers,
+                  onMarkerClick: function(event, index) {
+                      // alter the weburl
+                      $(location).attr('href', markers[index].weburl);
+                  }
               });
             });
           </script>
