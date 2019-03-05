@@ -6,7 +6,7 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <!--jquery-->
-     <script src="scripts/jquery.3.3.1.min.js"></script>
+     <script src="scripts/jquery-3.3.1.min.js"></script>
      <!--jvectormap-->
      <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
      <script src="scripts/jquery-jvectormap-2.0.3.min.js"></script>
@@ -58,10 +58,22 @@
      </div>
      <!--Welcome Portion-->
      <div class="main">
-       <div id="world-map" style="width: 600px; height: 400px"></div>
+       <div id="map" style="width: 600px; height: 400px"></div>
           <script>
             $(function(){
-              $('#map').vectorMap({map: 'us_aea'});
+              var map, markerIndex = 0, markersCoords = [{name: 'VAK', coords: [50.0091294, 9.0371812], status: 'closed', offsets: [0, 2]}];
+              map = new jvm.Map({
+                  map: 'us_aea',
+                  markerStyle: {
+                    initial: {
+                      fill: 'red'
+                    }
+                  },
+                  container: $('#map'),
+                  onMarkerTipShow: function(e, label, code){
+                    map.tip.text(markersCoords[code].lat.toFixed(2)+', '+markersCoords[code].lng.toFixed(2));
+                  },
+              });
             });
           </script>
           <div class="text-center">
