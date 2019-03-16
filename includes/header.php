@@ -17,6 +17,7 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="/NAA/About">ABOUT</a></li>
                          <li><a href="/NAA/Sponsors">SPONSORS</a></li>
+                         <li><a href="/NAA/Forum">FORUM</a></li>
                          <li class="dropdown">
                               <a href="/NAA/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
                               <ul class="dropdown-menu">

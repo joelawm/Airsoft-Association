@@ -1,24 +1,13 @@
 <html>
 <head>
-     <title>Places to Airsoft</title>
-     <!--jquery-->
-     <script src="/NAA/scripts/jquery-3.3.1.min.js"></script>
-     <!--jvectormap-->
-     <link rel="stylesheet" href="/NAA/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
-     <script src="/NAA/scripts/jquery-jvectormap-2.0.3.min.js"></script>
-     <script src="/NAA/scripts/jquery-jvectormap-us-aea.js"></script>
-     <script src="/NAA/scripts/US-map.js"></script>
+     <title>Information</title>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/head.txt"); ?>
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/header.php"); ?>
      <div class="main">
           <div class="text-center">
-               <b style="font-size:60px;color:#000000;">Places to play!</b>
-          </div>
-          <div id="map" class="container-fluid" style="width: 800px; height: 600px"></div>
-          <div class="row text-center">
-               <b style="font-size:30px;color:#000000;">New Sponsors!</b>
+               <b style="font-size:60px;color:#000000;">Information</b>
           </div>
           <div class="row center-block">
                <p style="font-size:15px;">
