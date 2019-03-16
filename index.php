@@ -2,15 +2,11 @@
 <head>
      <title>Home</title>
      <script type="text/javascript" src="/NAA/scripts/carousel.js"></script>
-     <?php
-     include("includes/head.txt");
-     ?>
+     <?php include("includes/head.txt"); ?>
 </head>
 <body>
      <!--Header-->
-     <?php
-     include("includes/header.php");
-     ?>
+     <?php include("includes/header.php"); ?>
      <div class="slideshow-container">
           <div class="mySlides">
                <img src="Photos/NAA Photos/American_Flag.jpg" style="width:100%;height:600px;">
