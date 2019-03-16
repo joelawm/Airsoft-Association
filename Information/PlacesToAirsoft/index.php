@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php
-      include($_SERVER['DOCUMENT_ROOT'] ."/NAA/includes/header.php");
+      include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/header.php");
     ?>
     <div class="main">
       <div class="text-center">
