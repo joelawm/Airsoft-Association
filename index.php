@@ -20,35 +20,6 @@
       </div>
   <!--Welcome Portion-->
   <div class="main">
-    <div id="map" style="width: 600px; height: 400px"></div>
-       <script>
-       var markers = [
-         { latLng: [42.70, -88.5], name: 'Black Ops Airsoft',  weburl : "https://youtube.com" },
-         { latLng: [43.73, 7.41], name: 'Monaco' },
-         { latLng: [-0.52, 166.93], name: 'Nauru' }
-       ]
-         $(function(){
-           $('#map').vectorMap({
-               map: 'us_aea',
-               scaleColors: ['#C8EEFF', '#0071A4'],
-               normalizeFunction: 'polynomial',
-               hoverOpacity: 0.7,
-               hoverColor: false,
-               markerStyle: {
-                   initial: {
-                       fill: '#F8E23B',
-                       stroke: '#383f47'
-                   }
-               },
-               backgroundColor: '#383f47',
-               markers: markers,
-               onMarkerClick: function(event, index) {
-                   // alter the weburl
-                   $(location).attr('href', markers[index].weburl);
-               }
-           });
-         });
-       </script>
        <div class="text-center">
             <b style="font-size:60px;color:#000000;">Welcome Airsofters!</b>
        </div>

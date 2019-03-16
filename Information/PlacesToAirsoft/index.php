@@ -15,15 +15,15 @@
   <?php
     include($_SERVER['DOCUMENT_ROOT'] ."/NAA/includes/header.php");
   ?>
-  <div class="main" style="height:720px;">
-    <!--Welcome Portion-->
     <div class="main">
-      <div id="map" style="width: 600px; height: 400px"></div>
+      <div class="text-center">
+           <b style="font-size:60px;color:#000000;">Places to play!</b>
+      </div>
+      <div id="map" class="container-fluid" style="width: 800px; height: 600px"></div>
          <script>
          var markers = [
-           { latLng: [42.70, -88.5], name: 'Black Ops Airsoft',  weburl : "https://youtube.com" },
-           { latLng: [43.73, 7.41], name: 'Monaco' },
-           { latLng: [-0.52, 166.93], name: 'Nauru' }
+           { latLng: [42.559821, -87.961186], name: 'Black Ops Airsoft',  weburl : "https://youtube.com" },
+           { latLng: [42.090524, -88.261203], name: 'Paintball Explosion',  weburl : "https://youtube.com" }
          ]
            $(function(){
              $('#map').vectorMap({
@@ -47,21 +47,8 @@
              });
            });
          </script>
-         <div class="text-center">
-              <b style="font-size:60px;color:#000000;">Welcome Airsofters!</b>
-         </div>
          <div class="row text-center">
-              <b style="font-size:30px;color:#000000;">What do we do?</b>
-         </div>
-         <div class="row">
-              <p style="font-size:15px;">
-               We're the NAA here to protect your right to airsoft! We want to see this sport grow globally and see it get protected in your local area.
-               With your help we can make this happen. We as a comapny want to see the sport live on for future generations. There are people out there though do not see this as a sport.
-               We are here to present them with our case, and why airsoft is a sport that is inclusive and just plain fun for everyone. We hope to see your support, wether it be joining us
-               at airsoft events and in town halls, or by simply donating a dollar.</p>
-         </div>
-         <div class="row text-center">
-              <b style="font-size:30px;color:#000000;">Weekly Message:</b>
+              <b style="font-size:30px;color:#000000;">New Sponsors!</b>
          </div>
          <div class="row center-block">
               <p style="font-size:15px;">
@@ -69,19 +56,6 @@
                Please feel free to email us with local fields around you and with anything you think we should add. This website is for airsofters and we want to see it be
                in the hadns of airsfoters all over the globe!</p>
          </div>
-         <div class="row text-center">
-              <b style="font-size:30px;color:#000000;">Video of the week!</b>
-         </div>
-         <div class="row">
-              <center><iframe width="450" height="350" src="https://www.youtube.com/embed/dvRPisg6CO0"></iframe></center>
-         </div>
-         <div class="row text-center">
-              <b style="font-size:30px;color:#000000;">New Sponsors!</b>
-         </div>
-         <div class="row text-center" style="width:1186px;">
-              <p style="font-size:15px;"><span class="glyphicon glyphicon-minus"></span>Meyer Industries</p>
-         </div>
     </div>
-  </div>
 </body>
 </html>
