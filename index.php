@@ -13,13 +13,13 @@
      ?>
      <div class="slideshow-container">
           <div class="mySlides">
-               <img src="Photos/NAA Photos/American_Flag.jpg" style="width:100%">
+               <img src="Photos/NAA Photos/American_Flag.jpg" style="width:100%;height:600px;">
           </div>
           <div class="mySlides">
-               <img src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:100%">
+               <img src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:100%;height:600px;">
           </div>
           <div class="mySlides">
-               <img src="Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:100%">
+               <img src="Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:100%;height:600px;">
           </div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -71,7 +71,6 @@
 
 <style>
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -109,26 +108,6 @@ img {vertical-align: middle;}
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -143,14 +122,6 @@ img {vertical-align: middle;}
 
 .active, .dot:hover {
   background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -168,3 +139,32 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 </style>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>

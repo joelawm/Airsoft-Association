@@ -11,16 +11,16 @@
      <nav class="navbarmain navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/Home"><b style="font-family:'Bebas Neue';">NAA</b></a>
+                <a class="navbar-brand" href="/NAA"><b style="font-family:'Bebas Neue';">NAA</b></a>
             </div>
             <div class="collapse navbar-collapse" id="mainnavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/Home/About">ABOUT</a></li>
-                    <li><a href="/Home/Sponsors">SPONSORS</a></li>
+                    <li><a href="/NAA/About">ABOUT</a></li>
+                    <li><a href="/NAA/Sponsors">SPONSORS</a></li>
                     <li class="dropdown">
-                        <a href="Home/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
+                        <a href="/NAA/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="Information/PlacesToAirsoft">Places to Airsoft</a></li>
+                            <li><a href="/NAA/Information/PlacesToAirsoft">Places to Airsoft</a></li>
                             <li><a href="Home/GeneralRules">General Rules</a></li>
                             <li><a href="Home/AirsoftStores">Airsoft Stores</a></li>
                         </ul>
