@@ -11,24 +11,24 @@
      <nav class="navbarmain navbar-default">
           <div class="container">
                <div class="navbar-header">
-                    <a class="navbar-brand" href="/NAA"><b style="font-family:'Bebas Neue';">NAA</b></a>
+                    <a class="navbar-brand" href="/"><b style="font-family:'Bebas Neue';">NAA</b></a>
                </div>
                <div class="collapse navbar-collapse" id="mainnavbar">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="/NAA/About">ABOUT</a></li>
-                         <li><a href="/NAA/Sponsors">SPONSORS</a></li>
-                         <li><a href="/NAA/Forum">FORUM</a></li>
+                         <li><a href="/About">ABOUT</a></li>
+                         <li><a href="/Sponsors">SPONSORS</a></li>
+                         <li><a href="/Forum">FORUM</a></li>
                          <li class="dropdown">
-                              <a href="/NAA/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
+                              <a href="/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                   <li><a href="/NAA/Information/PlacesToAirsoft">Places to Airsoft</a></li>
-                                   <li><a href="/NAA/Information/GeneralRules">General Rules</a></li>
-                                   <li><a href="/NAA/Information/AirsoftStores">Airsoft Stores</a></li>
+                                   <li><a href="/Information/PlacesToAirsoft">Places to Airsoft</a></li>
+                                   <li><a href="/Information/GeneralRules">General Rules</a></li>
+                                   <li><a href="/Information/AirsoftStores">Airsoft Stores</a></li>
                               </ul>
                          </li>
-                         <li><a href="/NAA/Media">MEDIA</a></li>
-                         <li><a href="/NAA/Donate">DONATE</a></li>
-                         <li><a href="/NAA/Contact">CONTACT</a></li>
+                         <li><a href="/Media">MEDIA</a></li>
+                         <li><a href="/Donate">DONATE</a></li>
+                         <li><a href="/Contact">CONTACT</a></li>
                     </ul>
                </div>
           </div>

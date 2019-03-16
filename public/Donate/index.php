@@ -1,10 +1,10 @@
 <html>
 <head>
      <title>Donate</title>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/head.txt"); ?>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/header.php"); ?>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <div class="main">
           <div class="text-center">
                <b style="font-size:60px;color:#000000;">Donations</b>

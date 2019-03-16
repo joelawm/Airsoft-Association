@@ -2,16 +2,16 @@
 <head>
      <title>Places to Airsoft</title>
      <!--jquery-->
-     <script src="/NAA/scripts/jquery-3.3.1.min.js"></script>
+     <script src="/scripts/jquery-3.3.1.min.js"></script>
      <!--jvectormap-->
-     <link rel="stylesheet" href="/NAA/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
-     <script src="/NAA/scripts/jquery-jvectormap-2.0.3.min.js"></script>
-     <script src="/NAA/scripts/jquery-jvectormap-us-aea.js"></script>
-     <script src="/NAA/scripts/US-map.js"></script>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/head.txt"); ?>
+     <link rel="stylesheet" href="/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+     <script src="/scripts/jquery-jvectormap-2.0.3.min.js"></script>
+     <script src="/scripts/jquery-jvectormap-us-aea.js"></script>
+     <script src="/scripts/US-map.js"></script>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/header.php"); ?>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <div class="main">
           <div class="text-center">
                <b style="font-size:60px;color:#000000;">Places to play!</b>

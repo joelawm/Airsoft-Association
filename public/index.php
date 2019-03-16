@@ -1,7 +1,7 @@
 <html>
 <head>
      <title>Home</title>
-     <script type="text/javascript" src="/NAA/scripts/carousel.js"></script>
+     <script type="text/javascript" src="/scripts/carousel.js"></script>
      <?php include("includes/head.txt"); ?>
 </head>
 <body>
@@ -9,13 +9,13 @@
      <?php include("includes/header.php"); ?>
      <div class="slideshow-container">
           <div class="mySlides">
-               <img src="Photos/NAA Photos/American_Flag.jpg" style="width:100%;height:600px;">
+               <img src="/Photos/NAA Photos/American_Flag.jpg" style="width:100%;height:600px;">
           </div>
           <div class="mySlides">
-               <img src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:100%;height:600px;">
+               <img src="/Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:100%;height:600px;">
           </div>
           <div class="mySlides">
-               <img src="Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:100%;height:600px;">
+               <img src="/Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:100%;height:600px;">
           </div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>

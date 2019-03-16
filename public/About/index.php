@@ -1,10 +1,10 @@
 <html>
 <head>
      <title>About</title>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/head.txt"); ?>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/NAA/includes/header.php"); ?>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <div class="main">
           <!--Body-->
           <div class="row center-block" style="width:1186px;height:40px"></div>
