@@ -1,30 +1,23 @@
 <html>
 <head>
-     <title>Home</title>
-     <link rel="icon" href="Photos/Favicon/favicon.jpg">
-     <link rel="stylesheet" type="text/css" href="css/main.css" />
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!--jquery-->
-     <script src="scripts/jquery-3.3.1.min.js"></script>
-     <!--jvectormap-->
-     <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
-     <script src="scripts/jquery-jvectormap-2.0.3.min.js"></script>
-     <script src="scripts/jquery-jvectormap-us-aea.js"></script>
-     <!-- Twitter Bootstrap CDN -->
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>Home</title>
+      <?php
+      include("includes/head.txt");
+      ?>
 </head>
 <body>
-  <?php include("includes/header.html"); ?>
-  <div class="main" style="height:720px;">
-       <div class="row w3-content w3-display-container">
-            <img class="frontpageslides img-responsive" src="Photos/NAA Photos/American_Flag.jpg" style="width:1186px;height:700px;">
-            <img class="frontpageslides img-responsive" src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:1186px;height:700px;">
-            <img class="frontpageslides img-responsive" src="Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:1186px;height:700px;">
-       </div>
-  </div>
+      <!--Header-->
+      <?php
+      include("includes/header.php");
+      ?>
+      <!--carousel-->
+      <div class="main" style="height:720px;">
+           <div class="row w3-content w3-display-container">
+                <img class="frontpageslides img-responsive" src="Photos/NAA Photos/American_Flag.jpg" style="width:1186px;height:700px;">
+                <img class="frontpageslides img-responsive" src="Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="width:1186px;height:700px;">
+                <img class="frontpageslides img-responsive" src="Photos/NAA Photos/Sniper Closeup_side.jpg" style="width:1186px;height:700px;">
+           </div>
+      </div>
   <!--Welcome Portion-->
   <div class="main">
     <div id="map" style="width: 600px; height: 400px"></div>

@@ -1,13 +1,4 @@
 <html>
-<head>
-     <link rel="stylesheet" type="text/css" href="css/main.css" />
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!-- Twitter Bootstrap CDN -->
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
 <body style="background:#ffffff">
      <!--Socail Media Navbar-->
      <div class="topnavbar">
@@ -29,9 +20,9 @@
                     <li class="dropdown">
                         <a href="Home/Information" class="dropdown-toggle" data-toggle="dropdown">INFORMATION<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/PlacesToAirsoft">Places to Airsoft</a></li>
-                            <li><a href="/Home/GeneralRules">General Rules</a></li>
-                            <li><a href="/Home/AirsoftStores">Airsoft Stores</a></li>
+                            <li><a href="Information/PlacesToAirsoft">Places to Airsoft</a></li>
+                            <li><a href="Home/GeneralRules">General Rules</a></li>
+                            <li><a href="Home/AirsoftStores">Airsoft Stores</a></li>
                         </ul>
                     </li>
                     <li><a href="/Home/Media">MEDIA</a></li>
