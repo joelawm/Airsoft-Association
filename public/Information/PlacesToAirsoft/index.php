@@ -2,13 +2,12 @@
 <head>
      <title>Places to Airsoft</title>
      <!--jquery-->
-     <script src="/scripts/jquery-3.3.1.min.js"></script>
+     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
      <!--jvectormap-->
      <link rel="stylesheet" href="/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
      <script src="/scripts/jquery-jvectormap-2.0.3.min.js"></script>
      <script src="/scripts/jquery-jvectormap-us-aea.js"></script>
      <script src="/scripts/US-map.js"></script>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
