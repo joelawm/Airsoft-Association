@@ -48,18 +48,7 @@
                  Please feel free to email us with local fields around you and with anything you think we should add. This website is for airsofters and we want to see it be
                  in the hadns of airsfoters all over the globe!</p>
            </div>
-           <div class="row text-center">
-                <b style="font-size:30px;color:#000000;">Video of the week!</b>
-           </div>
-           <div class="row">
-                <center><iframe width="450" height="350" src="https://www.youtube.com/embed/dvRPisg6CO0"></iframe></center>
-           </div>
-           <div class="row text-center">
-                <b style="font-size:30px;color:#000000;">New Sponsors!</b>
-           </div>
-           <div class="row text-center" style="width:1186px;">
-                <p style="font-size:15px;"><span class="glyphicon glyphicon-minus"></span>Meyer Industries</p>
-           </div>
+
       </div>
 </body>
 </html>
