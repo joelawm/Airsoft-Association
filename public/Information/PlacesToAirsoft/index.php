@@ -17,13 +17,10 @@
           </div>
           <div id="map" class="container-fluid" style="width: 800px; height: 600px"></div>
           <div class="row text-center">
-               <b style="font-size:30px;color:#000000;">New Sponsors!</b>
+               <b style="font-size:30px;color:#000000;">Don't see your home field?</b>
           </div>
-          <div class="row center-block">
-               <p style="font-size:15px;">
-               We're offically laucnhed! Its the first week here at the NAA website and we need your help filing in the info.
-               Please feel free to email us with local fields around you and with anything you think we should add. This website is for airsofters and we want to see it be
-               in the hadns of airsfoters all over the globe!</p>
+          <div class="row text-center">
+               <p style="font-size:15px;">Please message us on our email in the contacts page so then we can contact the field owner and grab the information we need!</p>
           </div>
      </div>
 </body>

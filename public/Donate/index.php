@@ -6,15 +6,25 @@
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <div class="main">
-          <div class="text-center">
-               <b style="font-size:60px;color:#000000;">Donations</b>
-          </div>
-          <div class="row center-block">
-               <p style="font-size:15px;">
-               We're offically laucnhed! Its the first week here at the NAA website and we need your help filing in the info.
-               Please feel free to email us with local fields around you and with anything you think we should add. This website is for airsofters and we want to see it be
-               in the hadns of airsfoters all over the globe!</p>
-          </div>
+          <?php
+          	//require ('includes/conn.php');
+          	echo '<form action="assn11.php" method="post">';
+          	echo '<b class="text-centered" style="padding-top:60px;">Donation Amount</b>';
+          	echo '<input type="number" name="amount" id="amount" hint="amount" min="1"><br>';
+          	echo '<br><input type="submit" name="Donate" value="Donate"><br>';
+          	echo '</form>';
+
+          	if ($_SERVER['REQUEST_METHOD'] == 'POST')
+          	{
+          		$breed = trim($_POST['breed']);
+          		$name = trim($_POST['name']);
+          		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              		$sql = "INSERT INTO Dogs (breed, name) VALUES ('$breed', '$name')";
+              		// use exec() because no results are returned
+              		$conn->exec($sql);
+             		echo "New record created successfully";
+             	}
+          ?>
      </div>
 </body>
 </html>

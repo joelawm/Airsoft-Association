@@ -1,6 +1,6 @@
 <html>
 <head>
-     <title>Information</title>
+     <title>Forum</title>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>

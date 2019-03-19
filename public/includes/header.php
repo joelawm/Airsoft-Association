@@ -15,7 +15,6 @@
                </div>
                <div class="collapse navbar-collapse" id="mainnavbar">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="/About">ABOUT</a></li>
                          <li><a href="/Sponsors">SPONSORS</a></li>
                          <li><a href="/Forum">FORUM</a></li>
                          <li class="dropdown">
