@@ -28,6 +28,9 @@
                          <li><a href="/Media">MEDIA</a></li>
                          <li><a href="/Donate">DONATE</a></li>
                          <li><a href="/Contact">CONTACT</a></li>
+                         <li><a style="font-size:25px;">|</a></li>
+                         <li><a href="/login.php">LOGIN</a></li>
+                         <li><a href="/r.php">SIGN UP</a></li>
                     </ul>
                </div>
           </div>
