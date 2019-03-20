@@ -14,6 +14,12 @@ CREATE TABLE forum (
      category
 );
 
-CREATE TABLE fields(
+CREATE TABLE fields (
 
 );
+
+CREATE TABLE donations (
+     id
+     amount NOT NULL,
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)
