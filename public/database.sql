@@ -7,3 +7,13 @@ CREATE TABLE users (
     lastname VARCHAR(30) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE forum (
+     id
+     section
+     category
+);
+
+CREATE TABLE fields(
+
+);
