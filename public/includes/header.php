@@ -29,8 +29,21 @@
                          <li><a href="/Donate">DONATE</a></li>
                          <li><a href="/Contact">CONTACT</a></li>
                          <li><a style="font-size:25px;">|</a></li>
-                         <li><a href="/login.php">LOGIN</a></li>
-                         <li><a href="/r.php">SIGN UP</a></li>
+                         <?php
+                         // Initialize the session
+                         if(!isset($_SESSION))
+                         {
+                              session_start();
+                         }
+
+                         // Check if the user is already logged in, if yes then redirect him to welcome page
+                         if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) : ?>
+                              <li><a href="/account.php">ACCOUNT</a></li>
+                              <li><a href="/logout.php">SIGN OUT</a></li>
+                         <?php else : ?>
+                              <li><a href="/login.php">LOGIN</a></li>
+                              <li><a href="/r.php">SIGN UP</a></li>
+                         <?php endif; ?>
                     </ul>
                </div>
           </div>

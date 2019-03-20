@@ -216,14 +216,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
           if($stmt = mysqli_prepare($link, $sql))
           {
                // Bind variables to the prepared statement as parameters
-               mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+               mysqli_stmt_bind_param($stmt, "sssss", $param_username, $param_password, $param_email, $param_firstname, $param_lastname);
                // Set parameters
                $param_username = $username;
                $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+               $param_email = $email;
+               $param_lastname = $lastname;
+               $param_firstname = $firstname;
                // Attempt to execute the prepared statement
                if(mysqli_stmt_execute($stmt)){
                     // Redirect to login page
-                    header("location: login.php");
+                    header("location: /login.php");
                }
                else
                {
