@@ -22,4 +22,8 @@ CREATE TABLE donations (
      id
      amount NOT NULL,
      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-)
+);
+
+CREATE TABLE sponsors(
+
+);

@@ -1,6 +1,6 @@
 <html>
 <head>
-     <title>About</title>
+     <title>Sponsors</title>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
@@ -22,12 +22,13 @@
                    working, and protecting the rights of airsofters everywhere.</p>
               </div>
           </div>
+          <div class="page-header"> </div>
           <!--Sponsors-->
           <div class="row text-center" style="width:1100px;">
               <div class="col-sm-4"><a href="https://meyerindustries.com" class="center-block" style="color:#000000;font-size:30px;">Meyer Industries</a></div>
           </div>
           <div class="row text-center" style="width:1100px;">
-              <div class="col-sm-4"><img height="150" width="275" src="~/Photos/Sponsors/Meyer Indsutreis 1000x200.jpg" /></div>
+              <div class="col-sm-4"><img height="150" width="275" src="/Photos/Sponsors/MeyerIndustries.png" /></div>
           </div>
      </div>
 </body>
