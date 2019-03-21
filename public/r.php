@@ -250,7 +250,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="main">
+     <div class="mainform">
           <div class="wrapper">
                <h2>Sign Up</h2>
                <p>Please fill this form to create an account.</p>

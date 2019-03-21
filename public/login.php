@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="main">
+     <div class="mainform">
           <div class="wrapper">
               <h2>Login</h2>
               <p>Please fill in your credentials to login.</p>

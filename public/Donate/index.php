@@ -94,12 +94,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="form">
+     <div class="mainform">
          <h2 class="page-header">Donate</h2>
          <p>Please enter the amount you want to donate.</p>
          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
              <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                 <label c>Amount</label>
+                 <label>Amount</label>
                  <input type="text" placeholder="$1.00" name="username" class="form-control" value="<?php echo $username; ?>">
                  <span class="help-block"><?php echo $username_err; ?></span>
              </div>
