@@ -8,12 +8,18 @@
           <a href="https://www.youtube.com/channel/UC3LFSFS5otvxXUd9KQp2orA">YOUTUBE</a>
           <p>CONNECT WITH US:</p>
      </div>
-     <nav class="navbarmain navbar-default">
+     <nav class="navbarmain navbar navbar-default">
           <div class="container">
                <div class="navbar-header">
-                    <a class="navbar-brand" href="/"><b style="font-family:'Bebas Neue';">NAA</b></a>
+                    <a class="navbar-brand" href="/"><b>NAA</b></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
                </div>
-               <div class="collapse navbar-collapse" id="mainnavbar">
+               <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="/Sponsors">SPONSORS</a></li>
                          <li><a href="/Forum">FORUM</a></li>

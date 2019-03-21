@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="mainform">
+     <div class="form">
          <h2 class="page-header">Donate</h2>
          <p>Please enter the amount you want to donate.</p>
          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

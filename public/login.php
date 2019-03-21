@@ -94,8 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="mainform">
-          <div class="wrapper">
+     <div class="form align-items-center">
               <h2>Login</h2>
               <p>Please fill in your credentials to login.</p>
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -115,7 +114,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <p>Don't have an account? <a href="/r.php">Sign up now</a>.</p>
                   <a href="/passwordreset.php">Forgot Password?</a>
               </form>
-          </div>
      </div>
 </body>
 </html>

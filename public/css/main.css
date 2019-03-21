@@ -28,30 +28,18 @@ body {
   margin-top: 0;
 }
 
-.mainform {
+.main p{
+
+}
+
+.form {
      margin: 0 auto;
      padding-top: 32px;
      width: 600px;
 }
 
-.textTitle {
-     font-size:20px;
-     color:#000000;
-}
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
-}
-
-.footerR {
-  position: relative;
-  padding: 1rem;
-  text-align: center;
+.form input{
+     width: 250px;
 }
 
 body:before {
@@ -62,6 +50,9 @@ body:before {
   margin-top: -32767px;
 }
 
+/*
+First navbar for website
+*/
 .topnavbar {
     background-color: #1d1d1d;
     height: 30px;
@@ -96,6 +87,8 @@ body:before {
     color: #ffffff;
 }
 
+/*secondary navbar
+*/
 .navbarmain {
   font-size: 14px !important;
 }

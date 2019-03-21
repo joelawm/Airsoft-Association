@@ -17,7 +17,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
      <!--Header-->
      <?php include("includes/header.php"); ?>
      <!--Welcome Portion-->
-     <div class="mainform">
+     <div class="form">
           <div class="page-header">
               <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
           </div>
