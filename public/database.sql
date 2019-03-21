@@ -14,16 +14,41 @@ CREATE TABLE forum (
      category
 );
 
-CREATE TABLE fields (
-
-);
-
 CREATE TABLE donations (
      id
      amount NOT NULL,
      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE sponsors(
+CREATE TABLE fields (
+     id
+     fieldname
+     fieldaddmission
+     gametype
+     address
+     fpslimits
+     paymenttypes
+     storeonlocation
+     wateronlocation
+     fullauto
+     generalrules
+     waiver
+     fieldwebsite
+     parking
+     state
+);
 
+CREATE TABLE sponsors (
+     id
+     company
+     profilepicture
+     websiteaddress
+);
+
+CREATE TABLE stores (
+     id
+     company
+     safewebsite
+     typeofgoods
+     storeaddress
 );
