@@ -34,7 +34,7 @@
                          <li><a href="/Media">MEDIA</a></li>
                          <li><a href="/Donate">DONATE</a></li>
                          <li><a href="/Contact">CONTACT</a></li>
-                         <li><a class="hidden-xs" style="font-size: 25px;">|</a></li>
+                         <li><a class="hidden-xs" style="font-size: 20px;">|</a></li>
                          <?php
                          // Initialize the session
                          if(!isset($_SESSION))
