@@ -95,3 +95,7 @@ First navbar for website
 .dropdown:hover > .dropdown-menu {
 display: block;
 }
+
+.row-centered {
+    text-align:center;
+}

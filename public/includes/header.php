@@ -8,7 +8,7 @@
           <a href="https://www.youtube.com/channel/UC3LFSFS5otvxXUd9KQp2orA">YOUTUBE</a>
           <p>CONNECT WITH US:</p>
      </div>
-     <nav class="navbarmain navbar navbar-default">
+     <nav class="navbarmain navbar navbar-default" role="navigation">
           <div class="container">
                <div class="navbar-header">
                     <a class="navbar-brand" href="/"><b>NAA</b></a>
@@ -34,7 +34,7 @@
                          <li><a href="/Media">MEDIA</a></li>
                          <li><a href="/Donate">DONATE</a></li>
                          <li><a href="/Contact">CONTACT</a></li>
-                         <li><a style="font-size:25px;">|</a></li>
+                         <li><a class="hidden-xs" style="font-size: 25px;">|</a></li>
                          <?php
                          // Initialize the session
                          if(!isset($_SESSION))
