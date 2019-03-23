@@ -1,23 +1,56 @@
-CREATE TABLE users (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(50) NOT NULL UNIQUE,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE DATABASE NAA;
+
+USE NAA;
+
+--User table for overall creation
+CREATE TABLE User (
+     UserId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (UserId),
+     Username VARCHAR(50) NOT NULL UNIQUE,
+     Password VARCHAR(255) NOT NULL,
+     Email VARCHAR(50) NOT NULL UNIQUE,
+     FirstName VARCHAR(30) NOT NULL,
+     LastName VARCHAR(30) NOT NULL,
+     ProfilePicture byrte stream or blob
+     Created DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE forum (
+-- Forum starts here and is in order
+CREATE TABLE Category (
+     CategoryId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (CategoryId)
+     CategoryName VARCHAR(75) NOT NULL UNIQUE,
+);
+
+CREATE TABLE Topic (
+     TopicId INT NOT NULL AUTO_INCREMENT,
+     TopicName
+);
+
+CREATE TABLE SubTopic (
+);
+
+CREATE TABLE Forum (
+);
+
+CREATE TABLE Post (
      id
-     section
-     category
+     content VARCHAR(10000),
 );
 
+CREATE TABLE Content (
+     ContentId INT NOT NULL AUTO_INCREMENT,
+     UserId INT NOT NULL,
+     PRIMARY KEY (ContentId)
+     FOREIGN KEY (UserId) REFERENCES User.UserId
+);
+
+--NAA information
 CREATE TABLE donations (
-     id
-     amount NOT NULL,
-     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+     id INT NOT NULL FOREIGN KEY AUTO_INCREMENT,
+     FOREIGN KEY (UserId) REFERENCES User
+     Amount INT NOT NULL,
+     Created DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE fields (
