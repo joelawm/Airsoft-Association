@@ -9,14 +9,15 @@
      <!--Welcome Portion-->
      <div class="container">
           <div class="slideshow-container">
+               <!--1080p-->
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/American_Flag.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="/Photos/NAA Photos/Redone.jpg" style="max-width: 100%; height: auto;">
                </div>
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/Landscpae_American Flag_Soldier.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="/Photos/NAA Photos/Redone1.jpg" style="max-width: 100%; height: auto;">
                </div>
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/Sniper Closeup_side.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="/Photos/NAA Photos/Redone2.jpg" style="max-width: 100%; height: auto;">
                </div>
                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                <a class="next" onclick="plusSlides(1)">&#10095;</a>

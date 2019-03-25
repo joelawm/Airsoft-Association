@@ -87,8 +87,7 @@ First navbar for website
     color: #ffffff;
 }
 
-/*secondary navbar
-*/
+/*secondary navbar*/
 .navbarmain {
   font-size: 14px !important;
 }
@@ -98,4 +97,42 @@ display: block;
 
 .row-centered {
     text-align:center;
+}
+
+/*Forum styling */
+ol li {
+     list-style-type: none;
+}
+
+.category-styling {
+     background-color:#c9c9c9;
+     text-transform: uppercase;
+     border-radius: 0;
+     padding: 13px 15px 13px 15px;
+}
+
+.topic-styling {
+     background-color:#e0e0e0;
+     padding: 15px;
+     border-width: 0 0 1px 0;
+     border-style: solid;
+     border-color: #ececec;
+}
+.header-styling {
+     background-color:#c9c9c9;
+     text-transform: uppercase;
+     border-radius: 0;
+     padding: 8px 10px 8px 10px;
+}
+
+.spacing{
+  box-model: border-box;
+  border: 5px solid transparent;
+  background-clip:padding-box;
+}
+
+.advertisment-style {
+     max-width: 100%;
+     height: auto;
+     padding-bottom: 10px;
 }

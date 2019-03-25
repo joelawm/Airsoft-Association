@@ -24,8 +24,9 @@ CREATE TABLE Category (
 
 CREATE TABLE Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
-     PRIMARY KEY (TopicId)
-     FOREIGN KEY (CategoryId) REFERENCES Category.CategoryId
+     PRIMARY KEY (TopicId),
+     CategoryId INT NOT NULL,
+     FOREIGN KEY (CategoryId) REFERENCES Category.CategoryId,
      TopicName VARCHAR(100) NOT NULL UNIQUE
 );
 
