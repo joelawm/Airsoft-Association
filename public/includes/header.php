@@ -45,11 +45,32 @@
 
                               // Check if the user is already logged in, if yes then redirect him to welcome page
                               if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) : ?>
-                                   <li><a href="/messages.php"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-                                   <li><a href="/notifications.php"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span></a></li>
-                                   <li><a href="/profile.php"><img src="/Photos/Forum/TempProfilePicture.jpg" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
+                                   <li class="dropdown dropdown-toggle" style="background-color: none;">
+                                        <a href="/inbox.php" style="padding: 18px 0px; background-color: none;" class="hidden-xs dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
+                                        <ul class="dropdown-menu" style="background-color: none;">
+                                             <div style="padding:15px;">
+                                                  <li><h2>Messages</h2></li>
+                                                  <li><button class="btn btn-default">Compose New</button></li>
+                                                  <li class="divider"></li>
+                                                  <li><p>Display notification</p></li>
+                                                  <li class="divider"></li>
+                                                  <li><a href="/notifications.php">View All</a></li>
+                                             </div>
+                                        </ul>
+                                   </li>
                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?><span class="caret"></span></a>
+                                        <a href="/notifications.php" style="padding: 18px 5px; class="hidden-xs""><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span></a>
+                                        <ul class="dropdown-menu">
+                                             <li><h2 style="padding:5px;">Notifications</h2></li>
+                                             <li class="divider"></li>
+                                             <li><p>Display notification</p></li>
+                                             <li class="divider"></li>
+                                             <li><a href="/notifications.php">View All</a></li>
+                                        </ul>
+                                   </li>
+                                   <li><a href="/profile.php" style="padding: 10px 5px;" class="hidden-xs"><img src="/Photos/Forum/TempProfilePicture.jpg" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
+                                   <li class="dropdown">
+                                        <a class="dropdown-toggle" style="padding: 15px 3px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?><span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                              <li><a href="/profile.php">Profile</a></li>
                                              <li><a href="/account.php">Account Settings</a></li>

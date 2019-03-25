@@ -7,9 +7,8 @@
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <div class="main">
           <div class="text-center">
-               <b style="font-size:60px;color:#000000;">Profile</b>
+               <b style="font-size:60px;color:#000000;">Messages</b>
           </div>
-
      </div>
 </body>
 </html>

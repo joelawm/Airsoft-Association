@@ -79,9 +79,9 @@ First navbar for website
 }
 
 .topnavbar a:hover {
-        color: #808080;
-        text-decoration: none;
-    }
+     color: #808080;
+     text-decoration: none;
+}
 
 .active, .topnavbar {
     color: #ffffff;
@@ -91,10 +91,11 @@ First navbar for website
 .navbarmain {
   font-size: 14px !important;
 }
+/*
 .dropdown:hover > .dropdown-menu {
 display: block;
 }
-
+*/
 .row-centered {
     text-align:center;
 }
@@ -136,7 +137,6 @@ ol li {
      height: auto;
      padding-bottom: 10px;
 }
-
 
 /*Account CSS*/
 .switch {
@@ -209,4 +209,8 @@ input:checked + .slider:before {
 
 .profile-picture {
 
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
 }
