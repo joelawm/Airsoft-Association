@@ -18,13 +18,15 @@ CREATE TABLE User (
 -- Forum starts here and is in order
 CREATE TABLE Category (
      CategoryId INT NOT NULL AUTO_INCREMENT,
-     PRIMARY KEY (CategoryId)
-     CategoryName VARCHAR(75) NOT NULL UNIQUE,
+     PRIMARY KEY (CategoryId),
+     CategoryName VARCHAR(75) NOT NULL UNIQUE
 );
 
 CREATE TABLE Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
-     TopicName
+     PRIMARY KEY (TopicId)
+     FOREIGN KEY (CategoryId) REFERENCES Category.CategoryId
+     TopicName VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE SubTopic (

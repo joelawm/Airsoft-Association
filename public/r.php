@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      else
      {
           // Prepare a select statement
-          $sql = "SELECT id FROM users WHERE username = ?";
+          $sql = "SELECT UserId FROM User WHERE Username = ?";
 
           if($stmt = mysqli_prepare($link, $sql))
           {
@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      else
      {
           // Prepare a select statement
-          $sql = "SELECT id FROM users WHERE email = ?";
+          $sql = "SELECT UserId FROM User WHERE Email = ?";
 
           if($stmt = mysqli_prepare($link, $sql))
           {
@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      else
      {
           // Prepare a select statement
-          $sql = "SELECT id FROM users WHERE firstname = ?";
+          $sql = "SELECT UserId FROM User WHERE Firstname = ?";
 
           if($stmt = mysqli_prepare($link, $sql))
           {
@@ -150,7 +150,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      else
      {
           // Prepare a select statement
-          $sql = "SELECT id FROM users WHERE lastname = ?";
+          $sql = "SELECT UserId FROM User WHERE Lastname = ?";
 
           if($stmt = mysqli_prepare($link, $sql))
           {
@@ -212,7 +212,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err) && empty($firstname_err) && empty($lastname_err))
      {
           // Prepare an insert statement
-          $sql = "INSERT INTO users (username, password, email, firstname, lastname) VALUES (?, ?, ?, ?, ?)";
+          $sql = "INSERT INTO User (Username, Password, Email, Firstname, Lastname) VALUES (?, ?, ?, ?, ?)";
           if($stmt = mysqli_prepare($link, $sql))
           {
                // Bind variables to the prepared statement as parameters
