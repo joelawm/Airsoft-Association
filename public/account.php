@@ -17,14 +17,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
      <!--Header-->
      <?php include("includes/header.php"); ?>
      <!--Welcome Portion-->
-     <div class="form">
-          <div class="page-header">
+     <div class="container">
+          <div class="row row-centered">
               <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-          </div>
-          <p>
               <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
               <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-          </p>
+              <!-- Rounded switch -->
+              <p>Dark Mode</p>
+              <label class="switch">
+                   <input type="checkbox">
+                   <span class="slider round"></span>
+              </label>
+         </div>
       </div>
 </body>
 </html>

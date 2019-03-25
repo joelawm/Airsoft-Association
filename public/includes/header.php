@@ -45,8 +45,17 @@
 
                               // Check if the user is already logged in, if yes then redirect him to welcome page
                               if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) : ?>
-                                   <li><a href="/account.php">ACCOUNT</a></li>
-                                   <li><a href="/logout.php">SIGN OUT</a></li>
+                                   <li><a href="/messages.php"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                                   <li><a href="/notifications.php"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></span></a></li>
+                                   <li><a href="/profile.php"><img src="/Photos/Forum/TempProfilePicture.jpg" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
+                                   <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?><span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                             <li><a href="/profile.php">Profile</a></li>
+                                             <li><a href="/account.php">Account Settings</a></li>
+                                             <li><a href="/logout.php">Sign Out</a></li>
+                                        </ul>
+                                   </li>
                               <?php else : ?>
                                    <li><a href="/login.php">LOGIN</a></li>
                                    <li><a href="/r.php">SIGN UP</a></li>
