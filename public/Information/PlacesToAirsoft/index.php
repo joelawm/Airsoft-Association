@@ -11,16 +11,16 @@
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="main">
-          <div class="text-center">
-               <b style="font-size:60px;color:#000000;">Places to play!</b>
+     <div class="container">
+          <div class="row row-centered">
+               <h1>Places to play!</h1>
           </div>
-          <div id="map" class="container-fluid" style="width: 800px; height: 600px"></div>
-          <div class="row text-center">
-               <b style="font-size:30px;color:#000000;">Don't see your home field?</b>
+          <div id="map" class="container-fluid" style="max-width: 100%; height: auto;"></div>
+          <div class="row row-centered">
+               <h4>Don't see your home field?</h4>
           </div>
-          <div class="row text-center">
-               <p style="font-size:15px;">Please message us on our email in the contacts page so then we can contact the field owner and grab the information we need!</p>
+          <div class="row row-centered">
+               <p>Please message us on our email in the contacts page so then we can contact the field owner and grab the information we need!</p>
           </div>
      </div>
 </body>
