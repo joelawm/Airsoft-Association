@@ -28,7 +28,7 @@
                <h4>Don't see your favorite store?</h4>
           </div>
           <div class="row row-centered">
-               <p>Please message us on our email in the contacts page so then we can contact the store owner and grab the information we need!</p>
+               <div class="col-12-sm"><p>Please message us on our email in the contacts page so then we can contact the store owner and grab the information we need!</p></div>
           </div>
      </div>
 </body>
