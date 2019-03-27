@@ -17,31 +17,6 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.main {
-     margin: 0 auto;
-     padding-top: 32px;
-     max-width: 1200px;
-     width:100%;
-}
-
-.main h1 {
-  margin-top: 0;
-}
-
-.main p{
-
-}
-
-.form {
-     margin: 0 auto;
-     padding-top: 32px;
-     width: 600px;
-}
-
-.form input{
-     width: 250px;
-}
-
 body:before {
   content: "";
   height: 100%;
@@ -114,6 +89,7 @@ display: block;
   border-radius: 50%;
   display: inline-block;
 }
+
 /*Forum styling */
 ol li {
      list-style-type: none;
@@ -213,16 +189,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.dropdown-menu {
-     left: -40px;
-     right: -40px;
-}
-
-
-.profile-picture {
-
 }
 
 /*Responsive iframe */
