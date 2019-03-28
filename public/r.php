@@ -250,55 +250,48 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
-     <div class="container">
-          <div class="wrapper">
-               <h2>Sign Up</h2>
-               <p>Please fill this form to create an account.</p>
-               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <!--Username-->
-                    <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                         <label>Username</label>
-                         <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                         <span class="help-block"><?php echo $username_err; ?></span>
-                    </div>
-                    <!--Email-->
-                    <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                         <label>Email</label>
-                         <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                         <span class="help-block"><?php echo $email_err; ?></span>
-                    </div>
-                    <!--First Name-->
-                    <div class="form-group <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
-                         <label>First Name</label>
-                         <input type="text" name="firstname" class="form-control" value="<?php echo $firstname; ?>">
-                         <span class="help-block"><?php echo $firstname_err; ?></span>
-                    </div>
-                    <!--Last Name-->
-                    <div class="form-group <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
-                         <label>Last Name</label>
-                         <input type="text" name="lastname" class="form-control" value="<?php echo $lastname; ?>">
-                         <span class="help-block"><?php echo $lastname_err; ?></span>
-                    </div>
-                    <!--Password-->
-                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                         <label>Password</label>
-                         <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                         <span class="help-block"><?php echo $password_err; ?></span>
-                    </div>
-                    <!--Confirm Password-->
-                    <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                         <label>Confirm Password</label>
-                         <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                         <span class="help-block"><?php echo $confirm_password_err; ?></span>
-                    </div>
-                    <!--Submit Buttons-->
-                    <div class="form-group">
-                         <input type="submit" class="btn btn-primary" value="Create Account">
-                    </div>
-                    <p>Already have an account? <a href="/login.php">Login here</a>.</p>
-                    <a href="/passwordreset.php">Forgot Password?</a>
-               </form>
-          </div>
+     <div class="login-form">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+               <h2 class="text-center">Sign Up</h2>
+               <p class="text-center">Please fill this form to create an account.</p>
+               <!--Username-->
+               <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                    <input type="text" name="username" placeholder="Username" class="form-control" value="<?php echo $username; ?>">
+                    <span class="help-block"><?php echo $username_err; ?></span>
+               </div>
+               <!--Email-->
+               <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                    <input type="text" name="email" placeholder="Email Address" class="form-control" value="<?php echo $email; ?>">
+                    <span class="help-block"><?php echo $email_err; ?></span>
+               </div>
+               <!--First Name-->
+               <div class="form-group <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
+                    <input type="text" name="firstname" placeholder="First Name" class="form-control" value="<?php echo $firstname; ?>">
+                    <span class="help-block"><?php echo $firstname_err; ?></span>
+               </div>
+               <!--Last Name-->
+               <div class="form-group <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
+                    <input type="text" name="lastname" placeholder="Last Name" class="form-control" value="<?php echo $lastname; ?>">
+                    <span class="help-block"><?php echo $lastname_err; ?></span>
+               </div>
+               <!--Password-->
+               <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <input type="password" name="password" placeholder="Password" class="form-control" value="<?php echo $password; ?>">
+                    <span class="help-block"><?php echo $password_err; ?></span>
+               </div>
+               <!--Confirm Password-->
+               <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control" value="<?php echo $confirm_password; ?>">
+                    <span class="help-block"><?php echo $confirm_password_err; ?></span>
+               </div>
+               <!--Submit Buttons-->
+               <div class="form-group">
+                    <input type="submit" class="btn btn-primary  btn-block" value="Create Account">
+               </div>
+               <p class="text-center">Already have an account? <a href="/login.php">Login here</a>.</p>
+               <div class="row row-centered"><a href="/passwordreset.php">Forgot Password?</a></div>
+          </form>
+     </div>
      </div>
 </body>
 </html>

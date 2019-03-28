@@ -46,7 +46,7 @@
                               // Check if the user is already logged in, if yes then redirect him to welcome page
                               if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) : ?>
                                    <li class="dropdown dropdown-toggle">
-                                        <a href="/inbox.php" style="padding: 18px 0px;" class="hidden-xs dropdown-toggle navbar-transparent" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
+                                        <a href="/inbox.php" style="padding: 18px 4px;" class="hidden-xs dropdown-toggle navbar-transparent" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
                                         <ul class="dropdown-menu">
                                              <div style="padding:15px;">
                                                   <li><h2>Messages</h2></li>
