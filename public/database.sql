@@ -6,12 +6,12 @@ USE NAA;
 CREATE TABLE User (
      UserId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (UserId),
-     Username VARCHAR(50) NOT NULL UNIQUE,
-     Password VARCHAR(255) NOT NULL,
-     Email VARCHAR(50) NOT NULL UNIQUE,
+     Username VARCHAR(25) NOT NULL UNIQUE,
+     Password VARCHAR(50) NOT NULL,
+     Email VARCHAR(75) NOT NULL UNIQUE,
      FirstName VARCHAR(30) NOT NULL,
      LastName VARCHAR(30) NOT NULL,
-     ProfilePicture byrte stream or blob
+     ProfilePicture VARCHAR (50) UNIQUE,
      Created DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -26,19 +26,28 @@ CREATE TABLE Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (TopicId),
      CategoryId INT NOT NULL,
-     FOREIGN KEY (CategoryId) REFERENCES Category.CategoryId,
+     FOREIGN KEY fkCat(CategoryId) REFERENCES Category(CategoryId),
      TopicName VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE SubTopic (
-);
-
-CREATE TABLE Forum (
+     SubTopicId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (SubTopicId),
+     TopicId INT NOT NULL,
+     FOREIGN KEY (TopicId) REFERENCES Topic.TopicId,
+     SubTopicName VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE Post (
-     id
-     content VARCHAR(10000),
+     PostId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (PostId),
+     CategoryId INT NOT NULL,
+     TopicId INT NOT NULL,
+     Author VARCHAR(25),
+     Title VARCHAR(128),
+     Content TEXT,
+     Created DATETIME DEFAULT CURRENT_TIMESTAMP,
+     View INT NOT NULL
 );
 
 CREATE TABLE Content (

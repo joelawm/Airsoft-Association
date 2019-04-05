@@ -27,7 +27,7 @@
           <div class="row row-centered">
               <div class="col-sm-4 col-sm-4">
                    <h4>Meyer Industries</h4>
-                   <a href="https://meyerindustries.com"><img height="150" width="275" src="/Photos/Sponsors/MeyerIndustries.png"/></a>
+                   <a href="http://meyerindustries.com"><img height="150" width="275" src="/Photos/Sponsors/MeyerIndustries.png"/></a>
               </div>
               <!--
               <div class="col-sm-4 col-sm-4">
