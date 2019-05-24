@@ -15,7 +15,7 @@
                          // Include config file
                          require_once($_SERVER['DOCUMENT_ROOT'] . "/config.php");
                          $stmt = $link->query('select * from Category');
-                         if ($stmt->num_rows > 0)
+                         if (is_object($stmt) && $stmt->num_rows > 0)
                          {
                               // output data of each row
                               while($row = $stmt->fetch_assoc())
@@ -30,14 +30,15 @@
                          }
                          else
                          {
-                              echo "0 results.";
+                              echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
                          }
                          $link->close();
                          ?>
                     </ol>
                </div>
+			<!--Advertisments-->
                <div class="col-lg-2 spacing" style="background-color:#efefef;">
-                    <h4 class="header-styling">advertisment</h4>
+                    <h4 class="header-styling">Advertisment</h4>
                     <!--insert size here-->
                     <a href="#advertismentlink"><img class="img-fluid advertisment-style" src="/Photos/Forum/dickbutt.jpg"></a>
                </div>
