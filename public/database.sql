@@ -19,8 +19,21 @@ CREATE TABLE User (
 CREATE TABLE Category (
      CategoryId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (CategoryId),
-     CategoryName VARCHAR(75) NOT NULL UNIQUE
+     CategoryTitle VARCHAR(75) NOT NULL UNIQUE
 );
+
+CREATE TABLE SubCategory (
+     SubCategoryId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (SubCategoryId),
+     CategoryId INT NOT NULL,
+     FOREIGN KEY fkcat(CategoryId) REFERENCES Category(CategoryId),
+     SubCategoryTitle VARCHAR(75) NOT NULL UNIQUE
+);
+
+<ol class="topic-styling">';'
+<li><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"><a href="#">' . $row["CategoryName"]. '</a></span></li>
+</ol>
+</li>';
 
 CREATE TABLE Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
@@ -28,14 +41,6 @@ CREATE TABLE Topic (
      CategoryId INT NOT NULL,
      FOREIGN KEY fkCat(CategoryId) REFERENCES Category(CategoryId),
      TopicName VARCHAR(100) NOT NULL UNIQUE
-);
-
-CREATE TABLE SubTopic (
-     SubTopicId INT NOT NULL AUTO_INCREMENT,
-     PRIMARY KEY (SubTopicId),
-     TopicId INT NOT NULL,
-     FOREIGN KEY (TopicId) REFERENCES Topic.TopicId,
-     SubTopicName VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE Post (

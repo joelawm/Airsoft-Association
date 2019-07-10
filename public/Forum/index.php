@@ -5,35 +5,14 @@
 </head>
 <body>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/Forum/content_function.php"); ?>
      <div class="container-fluid">
           <h1>Forums</h1>
           <!--Forum design starts here-->
           <div class="row-fluid">
                <div class="col-lg-10 spacing" style="background-color:#efefef;">
                     <ol style="padding: 0px;">
-                         <?php
-                         // Include config file
-                         require_once($_SERVER['DOCUMENT_ROOT'] . "/config.php");
-                         $stmt = $link->query('select * from Category');
-                         if (is_object($stmt) && $stmt->num_rows > 0)
-                         {
-                              // output data of each row
-                              while($row = $stmt->fetch_assoc())
-                              {
-                                   echo '<li class="no-style"><h3 class="category-styling">' . $row["CategoryName"]. '</h3>
-                                   <ol class="topic-styling">
-                                   <li><a href="#">' . $row["CategoryName"]. '</a></li>
-                                   <li><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"><a href="#">' . $row["CategoryName"]. '</a></span></li>
-                                   </ol>
-                                   </li>';
-                              }
-                         }
-                         else
-                         {
-                              echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
-                         }
-                         $link->close();
-                         ?>
+					<?php dispcategories(); ?>
                     </ol>
                </div>
 			<!--Advertisments-->
