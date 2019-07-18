@@ -2,10 +2,7 @@
 	//Display the caterogories for each topic
 	function dispcategories()
 	{
-		if (link == null)
-		{
-			include($_SERVER['DOCUMENT_ROOT'] . "/config.php");
-		}
+		include($_SERVER['DOCUMENT_ROOT'] . "/config.php");
 
 		$select = mysqli_query($link, "SELECT * FROM Category");
 		if (is_object($select) && $select->num_rows > 0)
@@ -13,7 +10,7 @@
 			while ($row = $select->fetch_assoc())
 			{
 				echo '<li class="no-style"><h3 class="category-styling">' . $row["CategoryTitle"]. '</h3>';
-				dispsubcategories($row['CategoryId']);
+				disptopics($row['CategoryId']);
 				echo '</li>';
 			}
 		}
@@ -24,21 +21,54 @@
 		$link->close();
 	}
 
-	function dispsubcategories($parent_id) {
-		if (link == NULL)
+	function disptopics($CategoryId)
+	{
+		include($_SERVER['DOCUMENT_ROOT'] . "/config.php");
+		$select = mysqli_query($link, "SELECT a.CategoryId, b.CategoryId, b.TopicName, b.TopicId FROM Category a, Topic b WHERE a.CategoryId = b.CategoryId");
+		if (is_object($select) && $select->num_rows > 0)
 		{
-			include($_SERVER['DOCUMENT_ROOT'] . "/config.php");
+			while ($row = mysqli_fetch_assoc($select))
+			{
+				if($CategoryId === $row['CategoryId'])
+				{
+					echo '<li class="no-style"><h3 class="topic-styling"><a href="/forum-tutorial/topics/">'.$row['TopicName'].'</a>, ';
+					echo '</li>';
+					dispsubtopics($row['TopicId']);
+				}
+			}
 		}
-		$select = mysqli_query($link, "SELECT CategoryId, SubCategoryId, SubCategoryTitle FROM Category, Subcategory WHERE ($parent_id = Category.CategoryId) AND ($parent_id = SubCategory.parent_id)");
-
-		echo "<tr><th width='90%'>Categories</th><th width='10%'>Topics</th></tr>";
-		while ($row = mysqli_fetch_assoc($select)) {
-			echo "<tr><td class='category_title'><a href='/forum-tutorial/topics/".$row['CategoryId']."/".$row['SubCategoryId']."'>
-				  ".$row['SubCategoryTitle']."<br />";
-			echo "<td class='num-topics'>".getnumtopics($parent_id, $row['SubCategoryId'])."</td></tr>";
+		else
+		{
+			echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
 		}
 	}
 
+	function dispsubtopics($TopicId)
+	{
+		include($_SERVER['DOCUMENT_ROOT'] . "/config.php");
+		$select = mysqli_query($link, "SELECT a.TopicId, b.TopicId, b.SubTopicTitle FROM Topic a, SubTopic b WHERE a.TopicId = b.TopicId");
+		if (is_object($select) && $select->num_rows > 0)
+		{
+			while ($row = mysqli_fetch_assoc($select))
+			{
+				if($TopicId === $row['TopicId'])
+				{
+					echo "<li><a href='/forum-tutorial/topics/'>".$row['SubTopicTitle']."</a>, ";
+				}
+			}
+		}
+		else
+		{
+			echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
+		}
+	}
+
+
+
+
+
+
+/*
 	function getnumtopics($cat_id, $subcat_id) {
 		include ('dbconn.php');
 		$select = mysqli_query($con, "SELECT category_id, subcategory_id FROM topics WHERE ".$cat_id." = category_id
@@ -115,4 +145,5 @@
 									  ".$scid." = subcategory_id AND ".$tid." = topic_id");
 		return mysqli_num_rows($select);
 	}
+	*/
 ?>

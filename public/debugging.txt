@@ -1,0 +1,2 @@
+Used on r.php for showing the error behind the 
+printf("Error: %s.\n", $stmt->error);

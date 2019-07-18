@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require "config.php";
 
 //Intialize these variables to be empty
 $username = $password = $confirm_password = $email = $firstname = $lastname = "";
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                }
                else
                {
-                    echo "Oops! Something went wrong. Please try again later.";
+                    $global_err = "Oops! Something went wrong. Please try again laterzzzz.";
                }
           }
           // Close statement
@@ -93,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                }
                else
                {
-                    echo "Oops! Something went wrong. Please try again later.";
+                    $global_err = "Oops! Something went wrong. Please try again laterzzz.";
                }
           }
           // Close statement
@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                }
                else
                {
-                    echo "Oops! Something went wrong. Please try again later.";
+                    $global_err = "Oops! Something went wrong. Please try again laterz.";
                }
           }
           // Close statement
@@ -143,7 +143,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      // Validate lastname
      if(empty(trim($_POST["lastname"])))
      {
-          $lastname_err = "Please enter a first name.";
+          $lastname_err = "Please enter a last name.";
      }
 
      //firstname has been entered correctly
@@ -169,7 +169,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                }
                else
                {
-                    echo "Oops! Something went wrong. Please try again later.";
+                    $global_err = "Oops! Something went wrong. Please try again laterzz.";
                }
           }
           // Close statement
@@ -224,14 +224,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                $param_lastname = $lastname;
                $param_firstname = $firstname;
                // Attempt to execute the prepared statement
-               if(mysqli_stmt_execute($stmt)){
+               if(mysqli_stmt_execute($stmt))
+			{
                     // Redirect to login page
                     header("location: /login.php");
                }
-               else
-               {
-                    echo "Something went wrong. Please try again later.";
-               }
+			else
+			{
+				$global_err = "Something went wrong. Please try again later.";
+			}
+
           }
           // Close statement
           mysqli_stmt_close($stmt);
@@ -290,6 +292,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                </div>
                <p class="text-center">Already have an account? <a href="/login.php">Login here</a>.</p>
                <div class="row row-centered"><a href="/passwordreset.php">Forgot Password?</a></div>
+			<span class="help-block text-center"><?php echo $global_err; ?></span>
           </form>
      </div>
      </div>

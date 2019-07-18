@@ -7,41 +7,44 @@ CREATE TABLE User (
      UserId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (UserId),
      Username VARCHAR(25) NOT NULL UNIQUE,
-     Password VARCHAR(50) NOT NULL,
+     Password VARCHAR(60) NOT NULL,
      Email VARCHAR(75) NOT NULL UNIQUE,
      FirstName VARCHAR(30) NOT NULL,
      LastName VARCHAR(30) NOT NULL,
-     ProfilePicture VARCHAR (50) UNIQUE,
-     Created DATETIME DEFAULT CURRENT_TIMESTAMP
+     ProfilePicture VARCHAR(50) UNIQUE,
+     Created DATETIME DEFAULT CURRENT_TIMESTAMP,
+	Role INT DEFAULT 100
 );
 
 -- Forum starts here and is in order
 CREATE TABLE Category (
      CategoryId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (CategoryId),
-     CategoryTitle VARCHAR(75) NOT NULL UNIQUE
+     CategoryTitle VARCHAR(75) NOT NULL UNIQUE,
+	PlaceNumber INT NOT NULL
 );
-
-CREATE TABLE SubCategory (
-     SubCategoryId INT NOT NULL AUTO_INCREMENT,
-     PRIMARY KEY (SubCategoryId),
-     CategoryId INT NOT NULL,
-     FOREIGN KEY fkcat(CategoryId) REFERENCES Category(CategoryId),
-     SubCategoryTitle VARCHAR(75) NOT NULL UNIQUE
-);
-
-<ol class="topic-styling">';'
-<li><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"><a href="#">' . $row["CategoryName"]. '</a></span></li>
-</ol>
-</li>';
 
 CREATE TABLE Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (TopicId),
      CategoryId INT NOT NULL,
      FOREIGN KEY fkCat(CategoryId) REFERENCES Category(CategoryId),
-     TopicName VARCHAR(100) NOT NULL UNIQUE
+     TopicTitle VARCHAR(100) NOT NULL UNIQUE
 );
+
+CREATE TABLE SubTopic (
+     SubTopicId INT NOT NULL AUTO_INCREMENT,
+     PRIMARY KEY (SubTopicId),
+     TopicId INT NOT NULL,
+     FOREIGN KEY fkcat(TopicId) REFERENCES Topic(TopicId),
+     SubTopicTitle VARCHAR(75) NOT NULL UNIQUE
+);
+
+
+
+
+
+
 
 CREATE TABLE Post (
      PostId INT NOT NULL AUTO_INCREMENT,
