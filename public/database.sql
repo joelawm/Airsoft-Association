@@ -7,7 +7,7 @@ CREATE TABLE User (
      UserId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (UserId),
      Username VARCHAR(25) NOT NULL UNIQUE,
-     Password VARCHAR(60) NOT NULL,
+     Password VARCHAR(255) NOT NULL,
      Email VARCHAR(75) NOT NULL UNIQUE,
      FirstName VARCHAR(30) NOT NULL,
      LastName VARCHAR(30) NOT NULL,

@@ -13,7 +13,7 @@ require_once "config.php";
 
 // Define variables and initialize with empty values
 $email = $username = $password = "";
-$email_err = $password_err = "";
+$email_err = $password_err = $global_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 		  else
 		  {
-                echo "Oops! Something went wrong. Please try again later.";
+                $global_err = "Oops! Something went wrong. Please try again later.";
             }
 		  // Close statement
 		  mysqli_stmt_close($stmt);
@@ -100,11 +100,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                <h2 class="text-center">Log in</h2>
                <div class="form-group" <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>>
                     <input type="text" name="email" class="form-control" placeholder="Email Address" value="<?php echo $email; ?>">
-                    <span class="help-block"><?php echo $email_err; ?></span>
+                    <span class="text-danger"><?php echo $email_err; ?></span>
                </div>
                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                     <input type="password" name="password" class="form-control" placeholder="Password">
-                    <span class="help-block"><?php echo $password_err; ?></span>
+                    <span class="text-danger"><?php echo $password_err; ?></span>
                </div>
                <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Log in</button>
@@ -114,6 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <a href="/Account/passwordreset.php" class="pull-right">Forgot Password?</a>
                </div>
                <p class="text-center" style="padding-top:7px;"><a href="/r.php">Create an Account</a></p>
+			<span class="text-danger text-center"><?php echo $global_err; ?></span>
           </form>
      </div>
 </body>

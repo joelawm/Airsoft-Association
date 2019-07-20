@@ -4,7 +4,7 @@ require "config.php";
 
 //Intialize these variables to be empty
 $username = $password = $confirm_password = $email = $firstname = $lastname = "";
-$username_err = $password_err = $confirm_password_err = $email_err = $firstname_err = $lastname_err = "";
+$username_err = $password_err = $confirm_password_err = $email_err = $firstname_err = $lastname_err = $global_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -259,40 +259,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                <!--Username-->
                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <input type="text" name="username" placeholder="Username" class="form-control" value="<?php echo $username; ?>">
-                    <span class="help-block"><?php echo $username_err; ?></span>
+                    <span class="text-danger"><?php echo $username_err; ?></span>
                </div>
                <!--Email-->
                <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                     <input type="text" name="email" placeholder="Email Address" class="form-control" value="<?php echo $email; ?>">
-                    <span class="help-block"><?php echo $email_err; ?></span>
+                    <span class="text-danger"><?php echo $email_err; ?></span>
                </div>
                <!--First Name-->
                <div class="form-group <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
                     <input type="text" name="firstname" placeholder="First Name" class="form-control" value="<?php echo $firstname; ?>">
-                    <span class="help-block"><?php echo $firstname_err; ?></span>
+                    <span class="text-danger"><?php echo $firstname_err; ?></span>
                </div>
                <!--Last Name-->
                <div class="form-group <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
                     <input type="text" name="lastname" placeholder="Last Name" class="form-control" value="<?php echo $lastname; ?>">
-                    <span class="help-block"><?php echo $lastname_err; ?></span>
+                    <span class="text-danger"><?php echo $lastname_err; ?></span>
                </div>
                <!--Password-->
                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                     <input type="password" name="password" placeholder="Password" class="form-control" value="<?php echo $password; ?>">
-                    <span class="help-block"><?php echo $password_err; ?></span>
+                    <span class="text-danger"><?php echo $password_err; ?></span>
                </div>
                <!--Confirm Password-->
                <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                     <input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control" value="<?php echo $confirm_password; ?>">
-                    <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                    <span class="text-danger"><?php echo $confirm_password_err; ?></span>
                </div>
                <!--Submit Buttons-->
                <div class="form-group">
                     <input type="submit" class="btn btn-primary  btn-block" value="Create Account">
                </div>
                <p class="text-center">Already have an account? <a href="/login.php">Login here</a>.</p>
-               <div class="row row-centered"><a href="/passwordreset.php">Forgot Password?</a></div>
-			<span class="help-block text-center"><?php echo $global_err; ?></span>
+               <div class="text-center"><a href="/passwordreset.php">Forgot Password?</a></div>
+			<span class="text-danger text-center"><?php echo $global_err; ?></span>
           </form>
      </div>
      </div>
