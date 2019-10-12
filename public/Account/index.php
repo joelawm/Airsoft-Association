@@ -11,7 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!doctype html>
 <html>
 <head>
-     <title>Account</title>
+	<title>Account</title>
      <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
 </head>
 <body>
@@ -19,78 +19,59 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
      <!--Welcome Portion-->
      <div class="container">
-		<div class="wrapper">
-		    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
-
-		    <!--
-
-		        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-		        Tip 2: you can also add an image using data-image tag
-
-		    -->
-
-		    	<div class="sidebar-wrapper">
-		            <div class="logo">
-		                <a href="http://www.creative-tim.com" class="simple-text">
-		                    Creative Tim
-		                </a>
-		            </div>
-
-		            <ul class="nav">
-		                <li class="active">
-		                    <a href="dashboard.html">
-		                        <i class="pe-7s-graph"></i>
-		                        <p>Dashboard</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="user.html">
-		                        <i class="pe-7s-user"></i>
-		                        <p>User Profile</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="table.html">
-		                        <i class="pe-7s-note2"></i>
-		                        <p>Table List</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="typography.html">
-		                        <i class="pe-7s-news-paper"></i>
-		                        <p>Typography</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="icons.html">
-		                        <i class="pe-7s-science"></i>
-		                        <p>Icons</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="maps.html">
-		                        <i class="pe-7s-map-marker"></i>
-		                        <p>Maps</p>
-		                    </a>
-		                </li>
-		                <li>
-		                    <a href="notifications.html">
-		                        <i class="pe-7s-bell"></i>
-		                        <p>Notifications</p>
-		                    </a>
-		                </li>
-						<li class="active-pro">
-		                    <a href="upgrade.html">
-		                        <i class="pe-7s-rocket"></i>
-		                        <p>Upgrade to PRO</p>
-		                    </a>
-		                </li>
-		            </ul>
-		    	</div>
-		    </div>
+			<div class="sidebar">
+			  <nav class="sidebar-nav">
+			    <ul class="nav">
+			      <li class="nav-title">Nav Title</li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">
+			          <i class="nav-icon cui-speedometer"></i> Nav item
+			        </a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">
+			          <i class="nav-icon cui-speedometer"></i> With badge
+			          <span class="badge badge-primary">NEW</span>
+			        </a>
+			      </li>
+			      <li class="nav-item nav-dropdown">
+			        <a class="nav-link nav-dropdown-toggle" href="#">
+			          <i class="nav-icon cui-puzzle"></i> Nav dropdown
+			        </a>
+			        <ul class="nav-dropdown-items">
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+			              <i class="nav-icon cui-puzzle"></i> Nav dropdown item
+			            </a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+			              <i class="nav-icon cui-puzzle"></i> Nav dropdown item
+			            </a>
+			          </li>
+			        </ul>
+			      </li>
+			      <li class="nav-item mt-auto">
+			        <a class="nav-link nav-link-success" href="https://coreui.io">
+			          <i class="nav-icon cui-cloud-download"></i> Download CoreUI</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link nav-link-danger" href="https://coreui.io/pro/">
+			          <i class="nav-icon cui-layers"></i> Try CoreUI
+			          <strong>PRO</strong>
+			        </a>
+			      </li>
+			    </ul>
+			  </nav>
+			  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+			</div>
          <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
          <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
          <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+	    <form action="/uploadeimage.php">
+		    <input type="file" name="pic" accept="image/png, image/jpeg">
+		    <input type="submit">
+		</form>
          <!-- Rounded switch -->
          <p>Dark Mode</p>
          <label class="switch">

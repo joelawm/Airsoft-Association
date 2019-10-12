@@ -63,6 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["email"] = $email;
                             $_SESSION["username"]= $username;
+					   $_SESSION["profilepic"]= $profilepic;
 
                             // Redirect user to welcome page
                             header("location: /Account");

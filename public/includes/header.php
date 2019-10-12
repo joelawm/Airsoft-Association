@@ -64,7 +64,7 @@ if(!isset($_SESSION))
                                         </div>
                                    </ul>
                               </li>
-                              <li class="nav-item"><a href="/Account" style="padding:4px;" class="hidden-xs nav-link"><img src="/Photos/Forum/TempProfilePicture.jpg" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
+                              <li class="nav-item"><a href="/Account" style="padding:4px;" class="hidden-xs nav-link"><img src="<?php echo htmlspecialchars($_SESSION["profilepic"]); ?>" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
                               <li class="nav-item dropdown">
                                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo htmlspecialchars($_SESSION["username"]); ?><span class="caret"></span></a>
                                    <ul class="dropdown-menu">
