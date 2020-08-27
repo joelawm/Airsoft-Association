@@ -11,13 +11,13 @@
           <div class="slideshow-container">
                <!--1080p-->
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/Redone.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="Photos/NAA Photos/Redone.jpg" style="max-width: 100%; height: auto;">
                </div>
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/Redone1.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="Photos/NAA Photos/Redone1.jpg" style="max-width: 100%; height: auto;">
                </div>
                <div class="mySlides">
-                    <img class="img-fluid" src="/Photos/NAA Photos/Redone2.jpg" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid" src="Photos/NAA Photos/Redone2.jpg" style="max-width: 100%; height: auto;">
                </div>
                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -54,5 +54,5 @@
       </div>
 </body>
 </html>
-<style><?php include($_SERVER['DOCUMENT_ROOT'] . "/css/carousel.css"); ?></style>
-<script><?php include($_SERVER['DOCUMENT_ROOT'] . "/scripts/carousel.js"); ?></script>
+<style><?php include("css/carousel.css"); ?></style>
+<script><?php include("scripts/carousel.js"); ?></script>

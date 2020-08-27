@@ -9,7 +9,7 @@ if(!isset($_SESSION))
 <body>
      <!--Socail Media Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-dark topnavbar py-0 d-none d-lg-block" role="navigation">
-		<ul class="navbar-nav ml-auto">
+		<ul class="navbar-nav justify-content-end">
 			<span class="navbar-text py-0">Connect with us:</span>
 			<li class="nav-item"><a class="nav-link py-0" href="https://www.facebook.com/TheNationalAirsoftAssociation/">Facebook</a></li>
 			<li class="nav-item"><a class="nav-link py-0" href="https://twitter.com/AirsoftAssoc">Twitter</a></li>
@@ -19,25 +19,25 @@ if(!isset($_SESSION))
 	</nav>
      <nav class="navbarmain navbar navbar-expand-lg navbar-light" role="navigation">
           <div class="container">
-			<a class="navbar-brand" href="/"><b>NAA</b></a>
+			<a class="navbar-brand" href="home"><b>NAA</b></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 		     </button>
                <div class="collapse navbar-collapse" id="navbarCollapse2">
                     <ul class="navbar-nav ml-auto">
-                         <li class="nav-item"><a class="nav-link" href="/Sponsors">SPONSORS</a></li>
-                         <li class="nav-item"><a class="nav-link"href="/Forum">FORUM</a></li>
+                         <li class="nav-item"><a class="nav-link" href="Sponsors">SPONSORS</a></li>
+                         <li class="nav-item"><a class="nav-link"href="Forum">FORUM</a></li>
                          <li class="nav-item dropdown">
                               <a href="/Information" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFORMATION</a>
                               <div class="dropdown-menu">
-                                   <a class="dropdown-item" href="/Information/PlacesToAirsoft">Places to Airsoft</a>
-                                   <a class="dropdown-item" href="/Information/GeneralRules">General Rules</a>
-                                   <a class="dropdown-item" href="/Information/AirsoftStores">Airsoft Stores</a>
+                                   <a class="dropdown-item" href="Information/PlacesToAirsoft">Places to Airsoft</a>
+                                   <a class="dropdown-item" href="Information/GeneralRules">General Rules</a>
+                                   <a class="dropdown-item" href="Information/AirsoftStores">Airsoft Stores</a>
                               </div>
                          </li>
-                         <li class="nav-item"><a class="nav-link" href="/Media">MEDIA</a></li>
-                         <li class="nav-item"><a class="nav-link" href="/Donate">DONATE</a></li>
-                         <li class="nav-item"><a class="nav-link" href="/Contact">CONTACT</a></li>
+                         <li class="nav-item"><a class="nav-link" href="Media">MEDIA</a></li>
+                         <li class="nav-item"><a class="nav-link" href="Donate">DONATE</a></li>
+                         <li class="nav-item"><a class="nav-link" href="Contact">CONTACT</a></li>
 					<span class="navbar-text d-none d-lg-block" style="font-size:20px; padding:3px;">|</span>
 
                          <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) : ?>
@@ -64,17 +64,17 @@ if(!isset($_SESSION))
                                         </div>
                                    </ul>
                               </li>
-                              <li class="nav-item"><a href="/Account" style="padding:4px;" class="hidden-xs nav-link"><img src="<?php echo htmlspecialchars($_SESSION["profilepic"]); ?>" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
+                              <li class="nav-item"><a href="Account" style="padding:4px;" class="hidden-xs nav-link"><img src="<?php echo htmlspecialchars($_SESSION["profilepic"]); ?>" class="img-fluid" style="width:30px;height:30px; border-radius: 75%;"></img></span></a></li>
                               <li class="nav-item dropdown">
                                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo htmlspecialchars($_SESSION["username"]); ?><span class="caret"></span></a>
                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="/Account">Account</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="/logout.php">Sign Out</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="Account">Account</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="logout.php">Sign Out</a></li>
                                    </ul>
                               </li>
                          <?php else : ?>
-                              <li class="nav-item"><a class="nav-link" href="/login.php">LOGIN</a></li>
-                              <li class="nav-item"><a class="nav-link" href="/r.php">SIGN UP</a></li>
+                              <li class="nav-item"><a class="nav-link" href="login">LOGIN</a></li>
+                              <li class="nav-item"><a class="nav-link" href="r">SIGN UP</a></li>
                          <?php endif; ?>
                     </ul>
                </div>

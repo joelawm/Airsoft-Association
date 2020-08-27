@@ -3,7 +3,7 @@ CREATE DATABASE NAA;
 USE NAA;
 
 --User table for overall creation
-CREATE TABLE User (
+CREATE TABLE NAA.User (
      UserId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (UserId),
      Username VARCHAR(25) NOT NULL UNIQUE,
@@ -17,14 +17,14 @@ CREATE TABLE User (
 );
 
 -- Forum starts here and is in order
-CREATE TABLE Category (
+CREATE TABLE NAA.Category (
      CategoryId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (CategoryId),
      CategoryTitle VARCHAR(75) NOT NULL UNIQUE,
 	PlaceNumber INT NOT NULL
 );
 
-CREATE TABLE Topic (
+CREATE TABLE NAA.Topic (
      TopicId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (TopicId),
      CategoryId INT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE Topic (
      TopicTitle VARCHAR(100) NOT NULL UNIQUE
 );
 
-CREATE TABLE SubTopic (
+CREATE TABLE NAA.SubTopic (
      SubTopicId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (SubTopicId),
      TopicId INT NOT NULL,
@@ -40,23 +40,26 @@ CREATE TABLE SubTopic (
      SubTopicTitle VARCHAR(75) NOT NULL UNIQUE
 );
 
-
-
-
-
-
-
-CREATE TABLE Post (
+CREATE TABLE NAA.Post (
      PostId INT NOT NULL AUTO_INCREMENT,
      PRIMARY KEY (PostId),
-     CategoryId INT NOT NULL,
      TopicId INT NOT NULL,
-     Author VARCHAR(25),
-     Title VARCHAR(128),
-     Content TEXT,
-     Created DATETIME DEFAULT CURRENT_TIMESTAMP,
-     View INT NOT NULL
+	FOREIGN KEY fkcat(TopicId) REFERENCES Topic(TopicId),
+     PostAuthor VARCHAR(25),
+     PostTitle VARCHAR(128),
+     PostContent VARCHAR(10000),
+     PostCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+     PostViewCount INT NOT NULL
 );
+
+
+
+
+
+
+
+
+
 
 CREATE TABLE Content (
      ContentId INT NOT NULL AUTO_INCREMENT,

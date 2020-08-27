@@ -16,7 +16,7 @@
 		}
 		else
 		{
-			echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
+			echo $server_error;
 		}
 		$link->close();
 	}
@@ -39,7 +39,7 @@
 		}
 		else
 		{
-			echo '<h3 class="category-styling">Connection failed: 0 results.</h3>';
+			echo $server_error;
 		}
 	}
 

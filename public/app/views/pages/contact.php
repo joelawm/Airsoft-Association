@@ -1,10 +1,10 @@
 <html>
 <head>
      <title>Contact</title>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/head.txt"); ?>
+     <?php include("includes/head.txt"); ?>
 </head>
 <body>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
+     <?php include("includes/header.php"); ?>
      <div class="container">
           <h2>Contact</h2>
           <p>This is the contact info for the NAA, feel free to shoot us any email you'd like!</p>
